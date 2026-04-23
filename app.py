@@ -86,3 +86,12 @@ if st.button("🔍 Predict", use_container_width=True):
     col5.metric("✅ Will Repay", f"{probability[0]:.1%}")
     col6.metric("❌ Will Default", f"{probability[1]:.1%}")
 
+    st.subheader("📊 Key Factors Influencing Decision")
+
+    if income < 40000:
+        st.write("• Lower income slightly increases default risk")
+    if prev_default == 'Y':
+        st.write("• Previous default significantly increases risk")
+    if credit_history < 3:
+        st.write("• Short credit history reduces reliability")
+
