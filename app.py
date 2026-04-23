@@ -88,10 +88,10 @@ if st.button("🔍 Predict", use_container_width=True):
 
     st.subheader("📊 Key Factors Influencing Decision")
 
-    if income < 40000:
+    if person_income < 40000:
         st.write("• Lower income slightly increases default risk")
-    if prev_default == 'Y':
+    if cb_person_default_on_file == 'Y':
         st.write("• Previous default significantly increases risk")
-    if credit_history < 3:
+    if cb_person_cred_hist_length < 3:
         st.write("• Short credit history reduces reliability")
 
